@@ -10,6 +10,14 @@ function setDisplay(id, value) {
     getID.innerText = value
 }
 
+let sum =0;
+function finalTotalPrice(id1,id2){
+  const price = parseInt(document.getElementById(id1).innerText)
+  const TotalQuantity = parseInt(document.getElementById(id2).innerText)
+  const finalPrice = price*TotalQuantity
+  sum=sum+finalPrice
+  setDisplay('total-price', sum)
+}
 
 let numberFinal = 0
 function setNamePriceQuantityWithID(n, p, q, firstPrice, firstQuantity) {
